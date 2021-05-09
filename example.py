@@ -1,4 +1,4 @@
-from strip_interactive.strip_interactive import run_interactive
+from strip_interactive import run_interactive
 
 code = """
 >>> import numpy as np
