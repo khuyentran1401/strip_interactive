@@ -8,7 +8,7 @@ Have you ever come across an online tutorial that shows interactive Python code 
 array([1, 2, 3])
 ```
 
-and wished to copy only the inputs like below?
+and wished to run only the inputs like below?
 
 ```python
 import numpy as np
