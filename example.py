@@ -1,4 +1,4 @@
-from strip_interactive import run_interactive
+from strip_interactive import run_interactive, get_clean_code
 
 code = """
 >>> import numpy as np
@@ -6,4 +6,6 @@ code = """
 array([1, 2, 3])
 """
 
-print(run_interactive(code))
+outputs = run_interactive(code)
+inputs = get_clean_code(code)
+print(inputs)

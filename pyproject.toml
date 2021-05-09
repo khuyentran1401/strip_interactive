@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "strip-interactive"
-version = "0.1.1"
+version = "0.1.2"
 description = "Strip and execute interactive Python string"
 authors = ["khuyentran1401 <khuyentran1476@gmail.com>"]
 homepage = "https://github.com/khuyentran1401/strip_interactive"

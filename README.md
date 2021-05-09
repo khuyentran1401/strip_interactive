@@ -29,14 +29,32 @@ code = """
 array([1, 2, 3])
 """
 
-print(run_interactive(code))
+outputs = run_interactive(code)
 ```
 
 Output:
 ```bash
 [1 2 3]
 ```
+You can also get the clean code (without inputs and `>>>`) using `get_clean_code` method.
 
+```python
+from strip_interactive import get_clean_code
+
+code = """
+>>> import numpy as np
+>>> print(np.array([1,2,3]))
+array([1, 2, 3])
+"""
+
+inputs = get_clean_code(code)
+print(inputs)
+```
+Output:
+```bash
+import numpy as np
+print(np.array([1,2,3]))
+```
 ## Installation
 ```bash
 pip install run-interactive

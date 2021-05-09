@@ -35,20 +35,25 @@ class InteractiveRunner:
                     inputs.append(line)
         return inputs
 
-    @staticmethod
-    def _run_inputs(inputs: str):
+    def get_clean_code(self):
+        lines = self._split_lines(self.interactive_code)
+        inputs = self._remove_outputs(lines)
         inputs = "\n".join(inputs)
+        return inputs
+
+    def run_inputs(self):
+        inputs = self.get_clean_code()
         with stdoutIO() as s:
             exec(inputs)
         return s.getvalue()
 
-    def run_interactive(self):
-        lines = self._split_lines(self.interactive_code)
-        inputs = self._remove_outputs(lines)
-        outputs = self._run_inputs(inputs)
-        return outputs
-
 def run_interactive(code: str):
-    return InteractiveRunner(code).run_interactive()
+    outputs = InteractiveRunner(code).run_inputs()
+    print(outputs)
+    return outputs
+
+def get_clean_code(code: str):
+    return InteractiveRunner(code).get_clean_code()
+
 
 
