@@ -21,7 +21,7 @@ That is when strip-interactive comes in handy.
 To use strip-interactive, simply add the code you want to run to `run_interactive` method.
 
 ```python
-from strip_interactive.strip_interactive import run_interactive
+from strip_interactive import run_interactive
 
 code = """
 >>> import numpy as np
