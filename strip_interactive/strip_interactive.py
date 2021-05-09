@@ -48,4 +48,7 @@ class InteractiveRunner:
         outputs = self._run_inputs(inputs)
         return outputs
 
+def run_interactive(code: str):
+    return InteractiveRunner(code).run_interactive()
+
 
