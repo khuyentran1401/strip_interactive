@@ -33,6 +33,8 @@ class InteractiveRunner:
                 line = line.replace('... ', '')
                 if line != '...':
                     inputs.append(line)
+        if inputs == []:
+            inputs = lines 
         return inputs
 
     def get_clean_code(self):
