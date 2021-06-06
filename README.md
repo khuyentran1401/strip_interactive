@@ -57,5 +57,5 @@ print(np.array([1,2,3]))
 ```
 ## Installation
 ```bash
-pip install run-interactive
+pip install strip-interactive
 ```
